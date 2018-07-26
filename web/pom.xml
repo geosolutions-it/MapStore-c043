@@ -39,7 +39,7 @@
       <artifactId>print-lib</artifactId>
       <version>geosolutions-2.0-SNAPSHOT</version>
     </dependency>
-    
+
     <dependency>
       <groupId>org.geotools</groupId>
       <artifactId>gt-epsg-hsql</artifactId>
@@ -123,7 +123,7 @@
   </dependencies>
 
   <build>
-    <finalName>MapStore-c043</finalName>
+    <finalName>mapstore</finalName>
     <plugins>
         <plugin>
             <artifactId>maven-resources-plugin</artifactId>
@@ -136,7 +136,7 @@
                         <goal>copy-resources</goal>
                     </goals>
                     <configuration>
-                        <outputDirectory>${basedir}/target/MapStore-c043</outputDirectory>
+                        <outputDirectory>${basedir}/target/mapstore</outputDirectory>
                         <encoding>UTF-8</encoding>
                         <resources>
                             <resource>
@@ -150,82 +150,13 @@
                     </configuration>
                 </execution>
                 <execution>
-                <id>only index.html</id>
-                    <phase>process-classes</phase>
-                    <goals>
-                        <goal>copy-resources</goal>
-                    </goals>
-                    <configuration>
-                        <outputDirectory>${basedir}/target/MapStore-c043</outputDirectory>
-                        <encoding>UTF-8</encoding>
-                        <resources>
-                            <resource>
-                                <directory>${basedir}/../dist</directory>
-                                <includes>
-                                    <include>index.html</include>
-                                </includes>
-                                <excludes>
-                                    <exclude>MapStore2/*</exclude>
-                                    <exclude>MapStore2/**/*</exclude>
-                                </excludes>
-                            </resource>
-                        </resources>
-                    </configuration>
-                </execution>
-                <execution>
-                    <id>only embedded.html</id>
-                    <phase>process-classes</phase>
-                    <goals>
-                        <goal>copy-resources</goal>
-                    </goals>
-                    <configuration>
-                        <outputDirectory>${basedir}/target/MapStore-c043</outputDirectory>
-                        <encoding>UTF-8</encoding>
-                        <resources>
-                            <resource>
-                                <directory>${basedir}/../dist</directory>
-                                <includes>
-                                    <include>embedded.html</include>
-                                </includes>
-                                <excludes>
-                                    <exclude>MapStore2/*</exclude>
-                                    <exclude>MapStore2/**/*</exclude>
-                                </excludes>
-                            </resource>
-                        </resources>
-                    </configuration>
-                </execution>
-                <execution>
-                    <id>only api.html</id>
-                    <phase>process-classes</phase>
-                    <goals>
-                        <goal>copy-resources</goal>
-                    </goals>
-                    <configuration>
-                        <outputDirectory>${basedir}/target/MapStore-c043</outputDirectory>
-                        <encoding>UTF-8</encoding>
-                        <resources>
-                            <resource>
-                                <directory>${basedir}/../dist</directory>
-                                <includes>
-                                    <include>api.html</include>
-                                </includes>
-                                <excludes>
-                                    <exclude>MapStore2/*</exclude>
-                                    <exclude>MapStore2/**/*</exclude>
-                                </excludes>
-                            </resource>
-                        </resources>
-                    </configuration>
-                </execution>
-                <execution>
                     <id>html, configuration files and images</id>
                     <phase>process-classes</phase>
                     <goals>
                         <goal>copy-resources</goal>
                     </goals>
                     <configuration>
-                        <outputDirectory>${basedir}/target/MapStore-c043</outputDirectory>
+                        <outputDirectory>${basedir}/target/mapstore</outputDirectory>
                         <encoding>UTF-8</encoding>
                         <resources>
                             <resource>
@@ -249,13 +180,82 @@
                     </configuration>
                 </execution>
                 <execution>
+                <id>only index.html</id>
+                    <phase>process-classes</phase>
+                    <goals>
+                        <goal>copy-resources</goal>
+                    </goals>
+                    <configuration>
+                        <outputDirectory>${basedir}/target/mapstore</outputDirectory>
+                        <encoding>UTF-8</encoding>
+                        <resources>
+                            <resource>
+                                <directory>${basedir}/../dist</directory>
+                                <includes>
+                                    <include>index.html</include>
+                                </includes>
+                                <excludes>
+                                    <exclude>MapStore2/*</exclude>
+                                    <exclude>MapStore2/**/*</exclude>
+                                </excludes>
+                            </resource>
+                        </resources>
+                    </configuration>
+                </execution>
+                <execution>
+                    <id>only embedded.html</id>
+                    <phase>process-classes</phase>
+                    <goals>
+                        <goal>copy-resources</goal>
+                    </goals>
+                    <configuration>
+                        <outputDirectory>${basedir}/target/mapstore</outputDirectory>
+                        <encoding>UTF-8</encoding>
+                        <resources>
+                            <resource>
+                                <directory>${basedir}/../dist</directory>
+                                <includes>
+                                    <include>embedded.html</include>
+                                </includes>
+                                <excludes>
+                                    <exclude>MapStore2/*</exclude>
+                                    <exclude>MapStore2/**/*</exclude>
+                                </excludes>
+                            </resource>
+                        </resources>
+                    </configuration>
+                </execution>
+                <execution>
+                    <id>only api.html</id>
+                    <phase>process-classes</phase>
+                    <goals>
+                        <goal>copy-resources</goal>
+                    </goals>
+                    <configuration>
+                        <outputDirectory>${basedir}/target/mapstore</outputDirectory>
+                        <encoding>UTF-8</encoding>
+                        <resources>
+                            <resource>
+                                <directory>${basedir}/../dist</directory>
+                                <includes>
+                                    <include>api.html</include>
+                                </includes>
+                                <excludes>
+                                    <exclude>MapStore2/*</exclude>
+                                    <exclude>MapStore2/**/*</exclude>
+                                </excludes>
+                            </resource>
+                        </resources>
+                    </configuration>
+                </execution>
+                <execution>
                     <id>js files</id>
                     <phase>process-classes</phase>
                     <goals>
                         <goal>copy-resources</goal>
                     </goals>
                     <configuration>
-                        <outputDirectory>${basedir}/target/MapStore-c043/dist</outputDirectory>
+                        <outputDirectory>${basedir}/target/mapstore/dist</outputDirectory>
                         <encoding>UTF-8</encoding>
                         <resources>
                             <resource>
@@ -271,7 +271,7 @@
                         <goal>copy-resources</goal>
                     </goals>
                     <configuration>
-                        <outputDirectory>${basedir}/target/MapStore-c043/assets</outputDirectory>
+                        <outputDirectory>${basedir}/target/mapstore/assets</outputDirectory>
                         <encoding>UTF-8</encoding>
                         <resources>
                             <resource>
@@ -287,7 +287,7 @@
                         <goal>copy-resources</goal>
                     </goals>
                     <configuration>
-                        <outputDirectory>${basedir}/target/MapStore-c043/MapStore2/web/client</outputDirectory>
+                        <outputDirectory>${basedir}/target/mapstore/MapStore2/web/client</outputDirectory>
                         <encoding>UTF-8</encoding>
                         <resources>
                             <resource>
@@ -312,7 +312,7 @@
                         <goal>copy-resources</goal>
                     </goals>
                     <configuration>
-                        <outputDirectory>${basedir}/target/MapStore-c043/printing</outputDirectory>
+                        <outputDirectory>${basedir}/target/mapstore/printing</outputDirectory>
                         <encoding>UTF-8</encoding>
                         <resources>
                             <resource>
@@ -331,7 +331,7 @@
                         <goal>copy-resources</goal>
                     </goals>
                     <configuration>
-                        <outputDirectory>${basedir}/target/MapStore-c043/MapStore2/web/client</outputDirectory>
+                        <outputDirectory>${basedir}/target/mapstore/MapStore2/web/client</outputDirectory>
                         <encoding>UTF-8</encoding>
                         <resources>
                             <resource>
@@ -350,7 +350,7 @@
                         <goal>copy-resources</goal>
                     </goals>
                     <configuration>
-                        <outputDirectory>${basedir}/target/MapStore-c043/MapStore2/web/client/libs/cesium-navigation</outputDirectory>
+                        <outputDirectory>${basedir}/target/mapstore/MapStore2/web/client/libs/cesium-navigation</outputDirectory>
                         <encoding>UTF-8</encoding>
                         <resources>
                             <resource>
@@ -366,7 +366,7 @@
                         <goal>copy-resources</goal>
                     </goals>
                     <configuration>
-                        <outputDirectory>${basedir}/target/MapStore-c043/MapStore2/web/client</outputDirectory>
+                        <outputDirectory>${basedir}/target/mapstore/MapStore2/web/client</outputDirectory>
                         <encoding>UTF-8</encoding>
                         <resources>
                             <resource>
@@ -411,7 +411,7 @@
             <version>6.1.20</version>
             <configuration>
                 <webAppConfig>
-                    <contextPath>/MapStore-c043</contextPath>
+                    <contextPath>/mapstore</contextPath>
                 </webAppConfig>
                 <connectors>
                     <connector implementation="org.mortbay.jetty.nio.SelectChannelConnector">
