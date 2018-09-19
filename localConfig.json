@@ -236,7 +236,7 @@
                 }
               }
             }
-          }, "AutoMapUpdate", "HelpLink", "Share", "DrawerMenu", "Version", "Notifications", "BackgroundSelector", "Annotations",
+          }, "AutoMapUpdate", "Share", "DrawerMenu", "Version", "Notifications", "BackgroundSelector", "Annotations",
             {
                 "name": "Identify",
                 "cfg": {
@@ -523,9 +523,9 @@
           "name": "DashboardEditor",
           "cfg": {
              "catalog": {
-               "url": "https://demo.geo-solutions.it/geoserver/wms",
+               "url": "http://geoserver2.055055.it/geoserver/wms",
                "type": "wms",
-               "title": "Demo WMS Service",
+               "title": "Linea Comune WMS Service",
                "autoload": false
              },
             "containerPosition": "columns"
