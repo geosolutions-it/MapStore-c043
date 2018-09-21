@@ -1,7 +1,7 @@
 {
     "proxyUrl": {
         "url": "proxy/?url=",
-        "useCORS": ["http://demo.geo-solutions.it/geoserver", "https://demo.geo-solutions.it:443/geoserver", "https://demo.geo-solutions.it/geoserver", "https://nominatim.openstreetmap.org", "http://csgeosrv2.cst/geoserver", "http://csgeosrv2/geoserver" , "http://csgeosrv2.lineacomune.it/geoserver", "http://192.168.100.42/geoserver"]
+        "useCORS": ["https://nominatim.openstreetmap.org", "http://csgeosrv2.cst/geoserver", "http://csgeosrv2/geoserver" , "http://csgeosrv2.lineacomune.it/geoserver", "http://192.168.100.42/geoserver"]
     },
     "geoStoreUrl": "rest/geostore/",
     "printUrl": "pdf/info.json",
@@ -58,24 +58,6 @@
                 "type": "wms",
                 "title": "Geoserver Linea Comune (Internal)",
                 "autoload": true
-              },
-              "Demo CSW Service": {
-                "url": "https://demo.geo-solutions.it/geoserver/csw",
-                "type": "csw",
-                "title": "Demo CSW Service",
-                "autoload": true
-              },
-              "Demo WMS Service": {
-                "url": "https://demo.geo-solutions.it/geoserver/wms",
-                "type": "wms",
-                "title": "Demo WMS Service",
-                "autoload": false
-              },
-              "Demo WMTS Service": {
-                "url": "https://demo.geo-solutions.it/geoserver/gwc/service/wmts",
-                "type": "wmts",
-                "title": "Demo WMTS Service",
-                "autoload": false
               }
             }
           }
@@ -265,13 +247,12 @@
                   "activateQueryTool": true,
                   "spatialOperations": [
                       {"id": "INTERSECTS", "name": "queryform.spatialfilter.operations.intersects"},
-                      {"id": "BBOX", "name": "queryform.spatialfilter.operations.bbox"},
                       {"id": "CONTAINS", "name": "queryform.spatialfilter.operations.contains"},
                       {"id": "WITHIN", "name": "queryform.spatialfilter.operations.within"}
                   ],
                   "spatialMethodOptions": [
                       {"id": "Viewport", "name": "queryform.spatialfilter.methods.viewport"},
-                      {"id": "BBOX", "name": "queryform.spatialfilter.methods.box"},
+		      {"id": "BBOX", "name": "queryform.spatialfilter.methods.box"},
                       {"id": "Circle", "name": "queryform.spatialfilter.methods.circle"},
                       {"id": "Polygon", "name": "queryform.spatialfilter.methods.poly"}
                   ]
@@ -284,13 +265,11 @@
                     "activateMetedataTool": false,
                     "spatialOperations": [
                         {"id": "INTERSECTS", "name": "queryform.spatialfilter.operations.intersects"},
-                        {"id": "BBOX", "name": "queryform.spatialfilter.operations.bbox"},
                         {"id": "CONTAINS", "name": "queryform.spatialfilter.operations.contains"},
                         {"id": "WITHIN", "name": "queryform.spatialfilter.operations.within"}
                     ],
                     "spatialMethodOptions": [
                         {"id": "Viewport", "name": "queryform.spatialfilter.methods.viewport"},
-                        {"id": "BBOX", "name": "queryform.spatialfilter.methods.box"},
                         {"id": "Circle", "name": "queryform.spatialfilter.methods.circle"},
                         {"id": "Polygon", "name": "queryform.spatialfilter.methods.poly"}
                     ]
@@ -368,8 +347,7 @@
                 "declineUrl" : "http://www.google.com"
                 }
             },
-            "OmniBar", "Login", "Save", "SaveAs", "BurgerMenu", "Expander", "Undo", "Redo", "FullScreen", "GlobeViewSwitcher", "SearchServicesConfig", "WidgetsBuilder", "Widgets",
-            "FloatingLegend"
+            "OmniBar", "Login", "Save", "SaveAs", "BurgerMenu", "Expander", "Undo", "Redo", "FullScreen", "GlobeViewSwitcher", "SearchServicesConfig", "WidgetsBuilder", "Widgets"
         ],
         "embedded": [{
                 "name": "Map",
